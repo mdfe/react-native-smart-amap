@@ -115,11 +115,13 @@ public class RCTAMapView extends FrameLayout implements LocationSource, AMapLoca
             WIDTH = getWidth();
             LayoutParams params = (LayoutParams) CenterView.getLayoutParams();
 
-            viewWidth = CenterView.getMeasuredWidth();
-            viewHeight = CenterView.getMeasuredHeight();
+            if (params != null) {
+                viewWidth = CenterView.getMeasuredWidth();
+                viewHeight = CenterView.getMeasuredHeight();
 
-            params.setMargins(WIDTH / 2 - viewWidth / 2, HEIGHT / 2 - viewHeight, 0, 0);
-            CenterView.setLayoutParams(params);
+                params.setMargins(WIDTH / 2 - viewWidth / 2, HEIGHT / 2 - viewHeight, 0, 0);
+                CenterView.setLayoutParams(params);
+            }
         }
 
         super.onLayout(changed, left, top, right, bottom);
