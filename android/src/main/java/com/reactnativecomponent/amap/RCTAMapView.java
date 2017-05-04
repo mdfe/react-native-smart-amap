@@ -200,9 +200,9 @@ public class RCTAMapView extends FrameLayout implements LocationSource, AMapLoca
      * @param mLocMarker
      */
     private void addLocationMarker(LatLng latLng, float RADIUS, Marker mLocMarker) {
-//        addCircle(latLng, RADIUS);//添加定位精度圆
-//        addMarker(latLng);//添加定位图标
-//        mSensorHelper.setCurrentMarker(mLocMarker);//定位图标旋转
+        addCircle(latLng, RADIUS);//添加定位精度圆
+        addMarker(latLng);//添加定位图标
+        mSensorHelper.setCurrentMarker(mLocMarker);//定位图标旋转
     }
 
     /**
